@@ -1,0 +1,58 @@
+[
+  {
+    "title": "La Balance Éthique",
+    "description_short": "Introduction au concept de Balance Éthique - positionnement conscient entre les extrêmes.",
+    "description_full": "La Balance Éthique représente un système philosophique de positionnement conscient. Le symbole • placé avant un mot indique une position constructive, après un mot une position destructive, et autour d'un mot un équilibre conscient entre les extrêmes.",
+    "collection": "M-Vox",
+    "blockchain": "Ethereum",
+    "tags": ["Philosophie", "Éthique", "Balance Éthique"],
+    "image": "/images/m-vox-1.png",
+    "pdf": "/pdfs/m-vox-balance-ethique.pdf",
+    "opensea_url": "",
+    "date": "2025-12-01",
+    "status": "published",
+    "order": 1
+  },
+  {
+    "title": "LENID - Shield Against Digital Totalitarianism",
+    "description_short": "Loi sur l'utilisation Éthique et limitée des identités Numériques et Intelligence artificielle Décentralisée.",
+    "description_full": "LENID propose un cadre législatif québécois pour protéger les citoyens contre les dérives de l'identité numérique centralisée et de l'IA. Une proposition visant à positionner le Québec comme leader en souveraineté numérique.",
+    "collection": "M-Vox",
+    "blockchain": "Ethereum",
+    "tags": ["Politique", "Souveraineté", "LENID", "Législation"],
+    "image": "/images/m-vox-2.png",
+    "pdf": "/pdfs/m-vox-lenid.pdf",
+    "opensea_url": "",
+    "date": "2025-12-05",
+    "status": "published",
+    "order": 2
+  },
+  {
+    "title": "Introduction à la Numérologie",
+    "description_short": "Les fondements de la numérologie pythagoricienne et son application moderne.",
+    "description_full": "Ce document présente les bases de la numérologie : calcul du chemin de vie, nombre d'expression, nombre intime et nombre de personnalité. Une introduction complète au système symbolique des nombres.",
+    "collection": "M-Numeris",
+    "blockchain": "Polygon",
+    "tags": ["Numérologie", "Introduction", "Méthodologie"],
+    "image": "/images/m-numeris-1.png",
+    "pdf": "/pdfs/m-numeris-intro.pdf",
+    "opensea_url": "",
+    "date": "2025-12-10",
+    "status": "published",
+    "order": 3
+  },
+  {
+    "title": "Le Chemin de Vie",
+    "description_short": "Calcul et interprétation du chemin de vie selon la date de naissance.",
+    "description_full": "Le chemin de vie représente votre trajectoire principale dans la vie. Ce document explique comment le calculer à partir de votre date de naissance et comment interpréter chaque nombre de 1 à 9, ainsi que les nombres maîtres 11, 22 et 33.",
+    "collection": "M-Numeris",
+    "blockchain": "Polygon",
+    "tags": ["Numérologie", "Chemin de Vie", "Calcul"],
+    "image": "/images/m-numeris-2.png",
+    "pdf": "/pdfs/m-numeris-chemin-vie.pdf",
+    "opensea_url": "",
+    "date": "2025-12-12",
+    "status": "published",
+    "order": 4
+  }
+]
