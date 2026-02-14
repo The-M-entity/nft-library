@@ -2,14 +2,14 @@
 {
   "order": 1,
   "date": "2026-01-01",
-  "pdf": "/pdfs/presentation_complete_m.pdf",
+  "pdf": "pdfs/presentation_complete_m.pdf",
   "description_full": "",
   "status": "published",
   "blockchain": "Polygon",
   "opensea_url": "https://opensea.io/item/polygon/0x6194ec6b65addef406421732ffb35dedbdbc89eb/2",
   "title": "Moi, Le •M•",
   "description_short": "Derrière cette lettre mystérieuse il y a quand même une âme. C'est moi. Et rares seront mes interventions. Du moins je l'espère...",
-  "image": "/images/moi-le-m.png",
+  "image": "images/moi-le-m.png",
   "collection": "Genesis M Vox"
 }
 ,
