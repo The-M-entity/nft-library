@@ -13,7 +13,7 @@ logo_url: /images/logo-m.png
 locale: 'fr'
 
 media_folder: "images"
-public_folder: "/images"
+public_folder: "images"
 
 slug:
   encoding: "ascii"
