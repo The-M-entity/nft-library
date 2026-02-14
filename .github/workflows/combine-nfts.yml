@@ -2,35 +2,51 @@ name: Combine NFT Files
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'data/*.json'
+
+permissions:
+  contents: write
 
 jobs:
   combine:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
       
-      - name: Combine NFT files
+      - name: Combine NFT files into nfts.json
         run: |
-          echo "[" > data/nfts.json
+          # Start JSON array
+          echo '[' > data/nfts.json
+          
+          # Find all JSON files except nfts.json, settings.json
           first=true
           for file in data/*.json; do
-            if [[ "$file" != "data/nfts.json" && "$file" != "data/about.json" && "$file" != "data/settings.json" ]]; then
+            filename=$(basename "$file")
+            if [[ "$filename" != "nfts.json" && "$filename" != "settings.json" ]]; then
               if [ "$first" = true ]; then
                 first=false
               else
-                echo "," >> data/nfts.json
+                echo ',' >> data/nfts.json
               fi
               cat "$file" >> data/nfts.json
             fi
           done
-          echo "]" >> data/nfts.json
+          
+          # Close JSON array
+          echo ']' >> data/nfts.json
       
-      - name: Commit combined file
+      - name: Commit and push
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
           git add data/nfts.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: Combine NFT files"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: Update combined nfts.json"
+            git push
+          fi
