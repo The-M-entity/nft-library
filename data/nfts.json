@@ -1,0 +1,29 @@
+[
+{
+  "order": 1,
+  "date": "2026-01-01",
+  "pdf": "/pdfs/presentation_complete_m.pdf",
+  "description_full": "",
+  "status": "published",
+  "blockchain": "Polygon",
+  "opensea_url": "https://opensea.io/item/polygon/0x6194ec6b65addef406421732ffb35dedbdbc89eb/2",
+  "title": "Moi, Le •M•",
+  "description_short": "Derrière cette lettre mystérieuse il y a quand même une âme. C'est moi. Et rares seront mes interventions. Du moins je l'espère...",
+  "image": "/images/moi-le-m.png",
+  "collection": "Genesis M Vox"
+}
+,
+{
+  "order": "",
+  "date": "2026-01-01",
+  "pdf": "/pdfs/vox_populi_manifeste_fondateur.pdf",
+  "description_full": "",
+  "status": "published",
+  "blockchain": "Polygon",
+  "opensea_url": "https://opensea.io/item/polygon/0x6194ec6b65addef406421732ffb35dedbdbc89eb/4",
+  "title": "Vox Populi - Manifeste Fondateur",
+  "description_short": "Document fondateur de Vox Populi - une conscience collective qui refuse de répéter les erreurs du passé. Ce manifeste pose les bases d'un système de démocratie numérique mensuel pour le Québec, où le pouvoir vient d'en bas, pas d'en haut. Référendums numériques mensuels. Votes blockchain vérifiables. Information neutre et éducative. Une population consultée pour de vrai, en temps réel, sur des vraies affaires. Le Québec comme refuge numérique. La voix du peuple, enfin entendue.",
+  "image": "/images/e.png",
+  "collection": "Genesis M Vox"
+}
+]
