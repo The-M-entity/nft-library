@@ -98,15 +98,12 @@ collections:
         hint: "Description détaillée pour la page de détail"
 
       # --- Classification ---
-      - label: "Collection"
-        name: "collection"
-        widget: "select"
-        options:
-          - { label: "M-Vox (Souveraineté / Politique)", value: "M-Vox" }
-          - { label: "M-Numeris (Numérologie)", value: "M-Numeris" }
-          - { label: "Autre", value: "Autre" }
-        default: "M-Vox"
-        required: true
+     - label: "Collection"
+  name: "collection"
+  widget: "string"
+  default: "M-Vox"
+  required: true
+  hint: "Ex: M-Vox, M-Numeris, M-Genesis, etc."
 
       - label: "Blockchain"
         name: "blockchain"
