@@ -1,0 +1,36 @@
+name: Combine NFT Files
+
+on:
+  push:
+    paths:
+      - 'data/*.json'
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Combine NFT files
+        run: |
+          echo "[" > data/nfts.json
+          first=true
+          for file in data/*.json; do
+            if [[ "$file" != "data/nfts.json" && "$file" != "data/about.json" && "$file" != "data/settings.json" ]]; then
+              if [ "$first" = true ]; then
+                first=false
+              else
+                echo "," >> data/nfts.json
+              fi
+              cat "$file" >> data/nfts.json
+            fi
+          done
+          echo "]" >> data/nfts.json
+      
+      - name: Commit combined file
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/nfts.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto: Combine NFT files"
+          git push
