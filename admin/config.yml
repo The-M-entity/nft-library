@@ -1,47 +1,26 @@
 # =============================================================================
 # Decap CMS Configuration - •M• NFT Library
 # =============================================================================
-# Authentication: Netlify Identity (recommended for Netlify hosting)
-# To switch to GitHub OAuth, comment out the Netlify section and uncomment GitHub section below.
 
-# --- OPTION 1: Netlify Identity (DEFAULT - RECOMMENDED) ---
 backend:
   name: git-gateway
   branch: main
 
-# --- OPTION 2: GitHub OAuth (uncomment below, comment out Option 1 above) ---
-# backend:
-#   name: github
-#   repo: YOUR_USERNAME/nft-library  # Replace with your GitHub repo
-#   branch: main
-#   base_url: https://api.netlify.com
-#   auth_endpoint: auth
-
-# =============================================================================
-# Site settings
-# =============================================================================
-site_url: https://your-site.netlify.app
-display_url: https://your-site.netlify.app
+site_url: https://m-gen-library.netlify.app
+display_url: https://m-gen-library.netlify.app
 logo_url: /images/logo-m.png
 
-# Locale
 locale: 'fr'
 
-# Media folders
 media_folder: "images"
 public_folder: "/images"
 
-# Slug settings
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
 
-# =============================================================================
-# Collections
-# =============================================================================
 collections:
-  # --- NFT Collection ---
   - name: "nfts"
     label: "NFTs"
     label_singular: "NFT"
@@ -77,7 +56,6 @@ collections:
         pattern: "M-Numeris"
 
     fields:
-      # --- Identité ---
       - label: "Titre"
         name: "title"
         widget: "string"
@@ -97,16 +75,12 @@ collections:
         required: false
         hint: "Description détaillée pour la page de détail"
 
-      # --- Classification ---
       - label: "Collection"
         name: "collection"
-        widget: "select"
-        options:
-          - { label: "M-Vox (Souveraineté / Politique)", value: "M-Vox" }
-          - { label: "M-Numeris (Numérologie)", value: "M-Numeris" }
-          - { label: "Autre", value: "Autre" }
+        widget: "string"
         default: "M-Vox"
         required: true
+        hint: "Ex: M-Vox, M-Numeris, M-Genesis, etc."
 
       - label: "Blockchain"
         name: "blockchain"
@@ -121,19 +95,18 @@ collections:
         name: "tags"
         widget: "list"
         required: false
-        hint: "Ex: Politique, Philosophie, Méthodologie, Numérologie, Souveraineté"
+        hint: "Ex: Politique, Philosophie, Méthodologie"
         field:
           label: "Tag"
           name: "tag"
           widget: "string"
 
-      # --- Médias ---
       - label: "Image NFT"
         name: "image"
         widget: "image"
         required: true
         media_folder: "/images"
-        hint: "Image principale du NFT (PNG/JPG, recommandé 1000x1000px)"
+        hint: "Image principale du NFT (PNG/JPG, 1000x1000px)"
 
       - label: "PDF Document"
         name: "pdf"
@@ -142,14 +115,12 @@ collections:
         media_folder: "/pdfs"
         hint: "Fichier PDF gratuit à télécharger"
 
-      # --- Liens ---
       - label: "Lien OpenSea"
         name: "opensea_url"
         widget: "string"
         required: false
-        hint: "URL complète OpenSea (laisser vide si pas encore minté)"
+        hint: "URL complète OpenSea"
 
-      # --- Métadonnées ---
       - label: "Date de publication"
         name: "date"
         widget: "datetime"
@@ -175,9 +146,8 @@ collections:
         min: 0
         default: 0
         required: false
-        hint: "Plus petit = affiché en premier (0 = automatique)"
+        hint: "Plus petit = affiché en premier"
 
-  # --- Pages statiques ---
   - name: "pages"
     label: "Pages"
     description: "Contenu des pages statiques"
@@ -194,7 +164,7 @@ collections:
           - label: "Introduction"
             name: "intro"
             widget: "markdown"
-            hint: "Texte d'introduction de la section About"
+            hint: "Texte d'introduction"
 
           - label: "Vision"
             name: "vision"
@@ -215,7 +185,7 @@ collections:
           - label: "Explication Balance Éthique"
             name: "balance_ethique"
             widget: "markdown"
-            hint: "Explication de la philosophie Balance Éthique et du symbole •"
+            hint: "Explication de la philosophie"
 
       - label: "Paramètres du site"
         name: "settings"
@@ -229,7 +199,7 @@ collections:
           - label: "Tagline"
             name: "tagline"
             widget: "string"
-            default: "Souveraineté numérique - Documentation libre - Propriété décentralisée"
+            default: "Souveraineté numérique"
 
           - label: "Email de contact"
             name: "contact_email"
